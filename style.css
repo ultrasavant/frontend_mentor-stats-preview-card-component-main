@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.frame {
+    font-size: 15px;
+    background-color: hsl(233, 47%, 7%);
+    width: 100vw;
+    height: 100vh;  
+
+    /* Card to center of screen*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 1000px; 
+    height: 435px; 
+    border-radius: 7.5px;
+    background-color: hsl(244, 38%, 16%);
+    margin: 0px 20px;  
+
+    /* Containers alongside each other*/
+    display: flex; 
+}
+
+.left_container {
+    min-width: 50%;
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+    padding: 60px 75px 60px 60px;
+}
+
+h1 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+
+span.purple_highlight {
+    color: hsl(277, 64%, 61%);
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-weight: 400;
+    margin-top: 25px;
+    line-height: 25px;
+}
+
+ul.stats {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    list-style-type: none;
+    margin-top: 75px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+ul.stats li {
+    flex-basis: 25%; 
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+span.bold_white {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+figure.right_container {
+    min-width: 50%;
+    border-radius: 0px 7.5px 7.5px 0px;
+    background-color: hsl(277, 74%, 27%); 
+}
+
+figure.right_container img {
+    width: 100%; 
+    height: 100%; 
+    border-radius: 0px 7.5px 7.5px 0px;
+    opacity: 0.4;
+}
+
+/* .attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+} */
+
+/* @media (max-width: 768px) */
+
+@media (max-width: 850px) {
+    body, .frame {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center; 
+        
+        width: 435px; 
+        height: 1000px;
+        margin: 100px 20px; 
+    }
+
+    .left_container h1 {
+        padding: 0px 10px;
+        text-align: center;
+    }
+
+    .left_container p {
+        padding: 0px 30px;
+        text-align: center;
+    }
+
+    figure.right_container, figure.right_container img {
+        border-radius: 7.5px 7.5px 0px 0px;
+    }
+
+    figure.right_container {
+        height: 10000%; /* Changing this value above 50% does nothing?! */
+    }
+
+    figure.right_container img {
+        width: 100%;
+    }
+    
+    ul.stats {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+        margin-top: 50px; 
+    
+    }
+
+    ul.stats li {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    ul.stats li:nth-of-type(3) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 0px;
+    }
+
+    /* .attribution { 
+        position: relative;
+        margin-bottom: 20px;
+        top: 450px;
+    } */
+
+}
